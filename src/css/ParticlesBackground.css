@@ -1,0 +1,70 @@
+/* ParticlesBackground.css */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(to bottom, #FCEFE7 0%, #ffffff 100%);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(241,90,34,0.4) 0%, 
+    rgba(241,90,34,0.2) 70%, 
+    transparent 100%
+  );
+  animation: float 20s linear infinite;
+  filter: blur(1px);
+}
+
+.particle-small {
+  width: 6px;
+  height: 6px;
+  animation-duration: 25s;
+}
+
+.particle-medium {
+  width: 10px;
+  height: 10px;
+  animation-duration: 20s;
+  opacity: 0.4;
+}
+
+.particle-large {
+  width: 14px;
+  height: 14px;
+  animation-duration: 15s;
+  opacity: 0.3;
+}
+
+.particle-square {
+  border-radius: 3px;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(43,58,103,0.1) 0%, 
+    rgba(43,58,103,0.05) 70%, 
+    transparent 100%
+  );
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(calc(50vw * sin(var(--x-offset))));
+    opacity: 0;
+  }
+}
