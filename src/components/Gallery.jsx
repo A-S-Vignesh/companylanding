@@ -27,15 +27,14 @@ const galleryData = [
   },
 ];
 
-const categories = ["ALL", "LETTERS", "UPVCWINDOWS", "DEVELOPERS", "RESIDENCY"];
+const categories = ["LETTERS", "UPVCWINDOWS", "DEVELOPERS", "RESIDENCY"];
 
 const Gallery = () => {
-  const [activeCategory, setActiveCategory] = useState("ALL");
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
-  const filteredImages =
-    activeCategory === "ALL"
-      ? galleryData
-      : galleryData.filter((img) => img.category === activeCategory);
+  const filteredImages = galleryData.filter(
+    (img) => img.category === activeCategory
+  );
 
   return (
     <section id="gallery" className="relative bg-white py-20 md:py-28 px-6">
@@ -65,7 +64,7 @@ const Gallery = () => {
                   : "text-sunlight-textMuted bg-sunlight-lightOrange hover:bg-sunlight-orange/20"
               }`}
             >
-              {cat}
+              SUNGLIGHT {cat}
             </button>
           ))}
         </div>

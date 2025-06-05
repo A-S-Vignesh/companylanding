@@ -4,7 +4,7 @@ import ParticlesBackground from "./ParticlesBackground";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-6 py-20 md:py-32">
-        <ParticlesBackground />
+      <ParticlesBackground />
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
         {/* Text Section */}
         <div className="space-y-8 md:pr-12">
@@ -58,7 +58,7 @@ const Hero = () => {
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-sunlight-lightOrange to-transparent rounded-3xl -rotate-2 transform group-hover:rotate-0 transition-transform duration-500"></div>
           <img
-            src="https://sunlightgroup.co/admin/uploads/9996950883slider2.jpg"
+            src="/images/develop.jpg"
             alt="Advanced energy storage solutions"
             className="relative z-10 w-full h-[500px] object-cover rounded-3xl shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-500"
           />

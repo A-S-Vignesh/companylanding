@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
     label: "Projects Completed",
-    value: "1,584+",
+    value: 1584,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const stats = [
   },
   {
     label: "Satisfied Clients",
-    value: "1,054+",
+    value: 1054,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const stats = [
   },
   {
     label: "Expert Team",
-    value: "50+",
+    value: 50,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const stats = [
   },
   {
     label: "Group Companies",
-    value: "04",
+    value: 4,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +83,66 @@ const stats = [
   },
 ];
 
+const formatNumber = (num) => {
+  return num.toLocaleString(); // Adds commas (e.g., 1,584)
+};
+
 const Stats = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateValues();
+          setHasAnimated(true);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  const animateValues = () => {
+    const duration = 2000; // total time in ms
+    const steps = 60;
+    const interval = duration / steps;
+
+    const finalValues = stats.map((s) => s.value);
+    const counters = [...animatedValues];
+    let count = 0;
+
+    const timer = setInterval(() => {
+      count++;
+      const newValues = finalValues.map((val) =>
+        Math.floor((val * count) / steps)
+      );
+      setAnimatedValues(newValues);
+
+      if (count >= steps) {
+        clearInterval(timer);
+        setAnimatedValues(finalValues);
+      }
+    }, interval);
+  };
+
   return (
-    <section className="relative bg-white py-20 md:py-28 px-6">
+    <section ref={sectionRef} className="relative bg-white py-20 md:py-28 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 bg-sunlight-lightOrange px-5 py-2.5 rounded-full mb-4">
             <span className="h-2 w-2 bg-sunlight-orange rounded-full"></span>
@@ -101,7 +156,7 @@ const Stats = () => {
           </h2>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((item, index) => (
             <div
@@ -109,13 +164,13 @@ const Stats = () => {
               className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-sunlight-lightOrange"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-sunlight-lightOrange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-
               <div className="relative z-10 text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-sunlight-lightOrange rounded-2xl text-sunlight-orange">
-                  {item.icon}
+                  {/* Replace with your icons if needed */}
+                  <span className="text-2xl font-bold">{item.icon }</span>
                 </div>
                 <div className="text-4xl font-bold text-sunlight-navy mb-2">
-                  {item.value}
+                  {formatNumber(animatedValues[index])}+
                 </div>
                 <div className="text-sunlight-textMuted uppercase tracking-wider text-sm font-medium">
                   {item.label}
@@ -125,7 +180,6 @@ const Stats = () => {
           ))}
         </div>
 
-        {/* Optional Divider */}
         <div className="mt-16 border-t border-sunlight-lightOrange mx-auto w-24"></div>
       </div>
     </section>

@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import ParticlesBackground from './components/ParticlesBackground';
+import Milestones from './components/Milestones';
 
 function App() {
 
@@ -18,9 +19,12 @@ function App() {
       {/* <ParticlesBackground /> */}
       <Navbar />
       <Hero />
+      <hr />
       <About />
       <GroupCompany />
       <Stats />
+      {/* <Milestones /> */}
+      <hr />
       <Gallery />
       <Testimonials />
       <Contact />

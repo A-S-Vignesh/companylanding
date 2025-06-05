@@ -21,6 +21,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
+            <img
+              src="https://www.sunlightgroup.co/images/logo.jpg"
+              alt="Sunlight Group Logo"
+              className="h-10 mr-3"
+            />
             <span className="text-2xl font-bold text-sunlight-orange tracking-wide">
               Sunlight<span className="text-sunlight-navy">Group</span>
             </span>
