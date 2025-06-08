@@ -23,7 +23,7 @@ function App() {
       <About />
       <GroupCompany />
       <Stats />
-      {/* <Milestones /> */}
+      <Milestones />
       <hr />
       <Gallery />
       <Testimonials />

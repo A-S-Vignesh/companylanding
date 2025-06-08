@@ -124,7 +124,7 @@ const GroupCompany = () => {
                 <p className="text-sunlight-textMuted leading-relaxed mb-6">
                   {company.description}
                 </p>
-                <button className="inline-flex items-center text-sunlight-orange font-medium hover:text-sunlight-darkOrange transition-colors">
+                {/* <button className="inline-flex items-center text-sunlight-orange font-medium hover:text-sunlight-darkOrange transition-colors">
                   Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const GroupCompany = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
