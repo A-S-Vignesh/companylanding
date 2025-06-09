@@ -150,9 +150,9 @@ const Stats = () => {
               Our Achievements
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-navy leading-tight">
-            <span className="text-sunlight-orange">Driving Excellence</span> in
-            Energy Solutions
+          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-orange leading-tight">
+            <span className="text-sunlight-navy">Delivering Trust</span> Across
+            Diverse Industries
           </h2>
         </div>
 
@@ -167,7 +167,7 @@ const Stats = () => {
               <div className="relative z-10 text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-sunlight-lightOrange rounded-2xl text-sunlight-orange">
                   {/* Replace with your icons if needed */}
-                  <span className="text-2xl font-bold">{item.icon }</span>
+                  <span className="text-2xl font-bold">{item.icon}</span>
                 </div>
                 <div className="text-4xl font-bold text-sunlight-navy mb-2">
                   {formatNumber(animatedValues[index])}+

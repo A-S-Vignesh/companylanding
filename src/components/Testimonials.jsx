@@ -4,22 +4,26 @@ const testimonials = [
   {
     name: "Ravi Kumar",
     title: "Project Manager, TechBuild",
-    text: "Sunlight Group exceeded our expectations. Their energy solutions are efficient and their support is excellent.",
-    image: "/testimonials/user1.jpg",
+    text: "Sunlight Group delivered exceptional solutions tailored to our energy needs. Their team’s professionalism and reliability stood out.",
+    image:
+      "https://ui-avatars.com/api/?name=Ravi+Kumar&background=0D8ABC&color=fff",
   },
   {
     name: "Priya Sharma",
     title: "CEO, EcoSpaces",
-    text: "Reliable, professional, and sustainable — everything we needed for our project. Highly recommended!",
-    image: "/testimonials/user2.jpg",
+    text: "We were impressed by Sunlight Group’s commitment to sustainability and innovation. Their systems helped improve our efficiency remarkably.",
+    image:
+      "https://ui-avatars.com/api/?name=Priya+Sharma&background=0D8ABC&color=fff",
   },
   {
     name: "Arun Mehta",
     title: "Operations Head, UrbanConstruct",
-    text: "Their team delivered on time with great communication. We'll definitely work with them again.",
-    image: "/testimonials/user3.jpg",
-    },
+    text: "From consultation to delivery, the experience with Sunlight Group was seamless. Their technical support is outstanding.",
+    image:
+      "https://ui-avatars.com/api/?name=Arun+Mehta&background=0D8ABC&color=fff",
+  },
 ];
+
 
 const Testimonials = () => {
   return (
@@ -33,8 +37,8 @@ const Testimonials = () => {
               Client Voices
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-navy leading-tight">
-            <span className="text-sunlight-orange">Trusted</span> by Industry
+          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-orange leading-tight">
+            <span className="text-sunlight-navy">Trusted</span> by Industry
             Leaders
           </h2>
         </div>

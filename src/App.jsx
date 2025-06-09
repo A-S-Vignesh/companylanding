@@ -16,14 +16,13 @@ function App() {
 
   return (
     <div className="scroll-smooth">
-      {/* <ParticlesBackground /> */}
       <Navbar />
       <Hero />
       <hr />
       <About />
       <GroupCompany />
       <Stats />
-      <Milestones />
+      {/* <Milestones /> */}
       <hr />
       <Gallery />
       <Testimonials />

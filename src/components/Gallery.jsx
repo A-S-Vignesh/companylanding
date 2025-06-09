@@ -47,8 +47,8 @@ const Gallery = () => {
               Our Work
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-navy leading-tight">
-            <span className="text-sunlight-orange">Project</span> Gallery
+          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-orange leading-tight">
+            <span className="text-sunlight-navy">Project</span> Gallery
           </h2>
         </div>
 

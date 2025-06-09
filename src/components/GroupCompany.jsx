@@ -89,7 +89,10 @@ const companies = [
 
 const GroupCompany = () => {
   return (
-    <section id="services" className="bg-sunlight-lightOrange py-20 md:py-28 px-6 md:px-12">
+    <section
+      id="services"
+      className="bg-sunlight-lightOrange py-20 md:py-28 px-6 md:px-12"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -99,8 +102,8 @@ const GroupCompany = () => {
               Our Divisions
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-navy leading-tight">
-            <span className="text-sunlight-orange">Group of</span> Global
+          <h2 className="text-4xl md:text-5xl font-bold text-sunlight-orange leading-tight">
+            <span className="text-sunlight-navy">Group of</span> Global
             Companies
           </h2>
         </div>
@@ -110,7 +113,7 @@ const GroupCompany = () => {
           {companies.map((company, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-3xl shadow-xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-sunlight-lightOrange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 

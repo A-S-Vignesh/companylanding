@@ -6,7 +6,7 @@ const navItems = [
   { label: "Home", href: "#" },
   { label: "About Us", href: "#about" },
   { label: "Solutions", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Gallery", href: "#gallery"},
   { label: "Contact", href: "#contact", isButton: true },
 ];
 
@@ -26,8 +26,9 @@ const Navbar = () => {
               alt="Sunlight Group Logo"
               className="h-10 mr-3"
             />
-            <span className="text-2xl font-bold text-sunlight-orange tracking-wide">
-              Sunlight<span className="text-sunlight-navy">Group</span>
+            <span className="text-2xl font-bold text-sunlight-navy tracking-wide">
+              Sunlight
+              <span className="text-sunlight-orange">Group</span>
             </span>
           </div>
 
